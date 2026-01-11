@@ -30,7 +30,12 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="custom-names" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -73,7 +78,7 @@
     "last_opened_file_path": "C:/Dev"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.custom-names [cleanAllPaperweightUserdevCaches]">
+  <component name="RunManager" selected="Gradle.custom-names:custom-names-plugin [runDevBundleServer]">
     <configuration name="custom-names [cleanAllPaperweightUserdevCaches]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -142,9 +147,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.custom-names:custom-names-plugin [runDevBundleServer]" />
         <item itemvalue="Gradle.custom-names [cleanAllPaperweightUserdevCaches]" />
         <item itemvalue="Gradle.custom-names [clean]" />
-        <item itemvalue="Gradle.custom-names:custom-names-plugin [runDevBundleServer]" />
       </list>
     </recent_temporary>
   </component>
