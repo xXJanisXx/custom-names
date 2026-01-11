@@ -21,13 +21,19 @@ class CustomNameImpl(
 
     private val interaction = SkeletonInteraction(this)
 
+    // Target entity constants
     private var effectiveHeight = 0.0
     private var passengerOffset = 0.0
+
+    // Custom name constants
     private var nametagEntityId = 0
+
+    // States
     private var targetEntitySneaking = false
-    private var hidden = false
 
     private var nameCallback: (viewer: Player) -> Component? = { null }
+    private var hidden = false
+
     private var task: BukkitTask? = null
 
     init {
@@ -41,6 +47,9 @@ class CustomNameImpl(
 
         val nametagOffset = nmsEntity.type.dimensions.height + 0.5f
 
+        // First, negate the riding offset to get to the bounding of the entity's bounding box
+        // Negate the natural nametag offset of interaction entities (0.5)
+        // Add the actual offset of the nametag
         this.effectiveHeight = -ridingOffset - 0.5 + nametagOffset
         this.passengerOffset = ridingOffset
 
@@ -66,13 +75,6 @@ class CustomNameImpl(
         this.syncData()
     }
 
-    override fun setHidden(hidden: Boolean) {
-        this.hidden = hidden
-        this.runOnTrackers { player ->
-            if (hidden) removeFromClient(player) else sendToClient(player)
-        }
-    }
-
     fun sendToClient(entity: Player) {
         if (!hidden) {
             (entity as CraftPlayer).handle.connection
@@ -84,6 +86,13 @@ class CustomNameImpl(
         (entity as CraftPlayer).handle.connection.send(interaction.removePacket())
     }
 
+    override fun setHidden(hidden: Boolean) {
+        this.hidden = hidden
+        this.runOnTrackers { player ->
+            if (hidden) removeFromClient(player) else sendToClient(player)
+        }
+    }
+
     override fun getName(viewer: Player): Component? = nameCallback(viewer)
     override fun getNametagId(): Int = nametagEntityId
     override fun getTargetEntity(): Entity = targetEntity
@@ -92,6 +101,7 @@ class CustomNameImpl(
     override fun getPassengerOffset(): Double = passengerOffset
     override fun isHidden(): Boolean = hidden
 
+    // Utilities
     private fun syncData() {
         if (hidden) return
 
