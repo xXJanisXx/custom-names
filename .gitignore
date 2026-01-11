@@ -43,3 +43,6 @@ bin/
 
 ### Run Tasks ###
 run/
+
+### Kotlin ###
+.kotlin/

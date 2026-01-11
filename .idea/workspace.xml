@@ -70,7 +70,9 @@
   "keyToString": {
     "Gradle.custom-names [cleanAllPaperweightUserdevCaches].executor": "Run",
     "Gradle.custom-names [clean].executor": "Run",
+    "Gradle.custom-names:custom-names-plugin [build].executor": "Run",
     "Gradle.custom-names:custom-names-plugin [runDevBundleServer].executor": "Run",
+    "Gradle.custom-names:custom-names-plugin [runServer].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "<unknown>",
@@ -78,7 +80,7 @@
     "last_opened_file_path": "C:/Dev"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.custom-names:custom-names-plugin [runDevBundleServer]">
+  <component name="RunManager" selected="Gradle.custom-names:custom-names-plugin [build]">
     <configuration name="custom-names [cleanAllPaperweightUserdevCaches]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -123,6 +125,28 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="custom-names:custom-names-plugin [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/custom-names-plugin" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="custom-names:custom-names-plugin [runDevBundleServer]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -145,11 +169,35 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="custom-names:custom-names-plugin [runServer]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/custom-names-plugin" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="runServer" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.custom-names:custom-names-plugin [build]" />
+        <item itemvalue="Gradle.custom-names [clean]" />
+        <item itemvalue="Gradle.custom-names:custom-names-plugin [runServer]" />
         <item itemvalue="Gradle.custom-names:custom-names-plugin [runDevBundleServer]" />
         <item itemvalue="Gradle.custom-names [cleanAllPaperweightUserdevCaches]" />
-        <item itemvalue="Gradle.custom-names [clean]" />
       </list>
     </recent_temporary>
   </component>
