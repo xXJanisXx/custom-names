@@ -115,7 +115,7 @@ class SkeletonInteraction(
         )
     }
 
-    private fun <T> ofData(data: EntityDataAccessor<T>, value: T): DataValue<T> {
+    private fun <T : Any> ofData(data: EntityDataAccessor<T>, value: T): DataValue<T> {
         return DataItem(data, value).value()
     }
 
